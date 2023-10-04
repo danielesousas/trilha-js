@@ -7,7 +7,7 @@ const leituraArquivo = fs.promises.readFile(filePath)
 
 leituraArquivo
     .then((arquivo) => arquivo.toString('utf8'))
-    .then((textoArquivo) => console.log[textoArquivo.split('\n').slice(1)])
+    .then((textoArquivo) => textoArquivo.split('\n').slice(1))
     .then((linhasSemCabecalho) => linhasSemCabecalho.map((linha) => {
         const [nome, feito] = linha.split(';')
         return {
